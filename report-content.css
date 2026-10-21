@@ -1,0 +1,98 @@
+/* Elements added with the v2.3 report text: quotes, compact statements, ratings, lists, members. */
+.pull-quote{margin:44px 0;padding:34px 0 34px 30px;border-left:4px solid var(--purple)}
+.pull-quote blockquote{margin:0}
+.pull-quote blockquote p{font-size:clamp(19px,2.1vw,24px);line-height:1.5;font-weight:300;color:var(--deep);margin:0 0 14px}
+.pull-quote blockquote p:first-child::before{content:'\201C'}
+.pull-quote blockquote p:last-child::after{content:'\201D'}
+.pull-quote figcaption{font-size:14px;color:var(--muted);margin-top:16px}
+.pull-quote figcaption strong{color:var(--ink)}
+
+.signoff{margin-top:32px;line-height:1.6}
+.footnote{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;margin-top:8px}
+.footnote a{margin-right:6px}
+sup.fn{font-size:.7em;line-height:0}
+sup.fn a{text-decoration:none;color:var(--purple);font-weight:600}
+
+.rating{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:500;white-space:nowrap}
+.r-sub{background:#6a2d90;color:#fff}
+.r-early{background:#ece2f3;color:#4a1f66}
+.r-weak{background:#1a4495;color:#fff}
+.r-info{background:#ebeaf0;color:#3d3a48}
+.num-table td:first-child,.num-table th:first-child,.rec-table td:first-child,.rec-table th:first-child{min-width:0;width:56px;padding-left:10px;padding-right:10px;text-align:center;white-space:nowrap;font-variant-numeric:tabular-nums}
+.nw{white-space:nowrap}
+.num-table td:nth-child(3),.num-table th:nth-child(3){min-width:150px}
+.rec-table a{color:var(--deep);font-weight:500}
+.category-table td:first-child{width:34%}
+
+.rec-copy .rec-interface{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);margin:6px 0 10px}
+.rec-copy .rec-compact{background:var(--wash);border-left:4px solid var(--purple);padding:16px 20px;font-weight:400;line-height:1.6}
+.rec-copy .rec-compact strong{color:var(--deep)}
+.rec-copy h4{font-size:16px;font-weight:600;color:var(--purple);margin:30px 0 12px}
+.rec-meta{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin:30px 0 8px}
+.rec-meta div{background:#fff;padding:14px 16px}
+.rec-meta dt{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--purple);margin-bottom:6px}
+.rec-meta dd{margin:0;font-size:14px;line-height:1.55}
+
+.lead-list{list-style:none;padding-left:0!important}
+.lead-list li{padding-left:18px;border-left:3px solid var(--purple);margin-bottom:18px}
+.circle-list{list-style:none;padding-left:0!important;display:grid;grid-template-columns:1fr 1fr;gap:14px;counter-reset:circle}
+.circle-list li{counter-increment:circle;background:var(--wash);padding:18px 18px 16px;margin:0;line-height:1.6;font-size:15px}
+.circle-list li::before{content:counter(circle);display:block;font-weight:800;font-size:22px;color:var(--purple);margin-bottom:4px}
+.circle-list li strong{color:var(--deep)}
+.member-list{list-style:none;padding-left:0!important}
+.member-list li{padding:10px 0;border-bottom:1px solid var(--line);margin:0;font-size:15px}
+.member-list li strong{font-weight:600}
+
+@media(max-width:720px){
+  .circle-list{grid-template-columns:1fr}
+  .rec-meta{grid-template-columns:1fr}
+  .pull-quote{padding-left:20px}
+}
+@media print{.pull-quote{break-inside:avoid}}
+
+/* v12 design elements: lead paragraph, photo quotes, image bands, sign-off portrait, traffic-light ratings, virtuous circle, footer logos */
+.prose p.lead{font-size:1.28em;line-height:1.55;color:var(--deep);font-weight:300}
+.pull-quote.has-image{position:relative;border-left:0;padding:0;min-height:440px;display:flex;align-items:flex-end;overflow:hidden;background:#120a3a}
+.pull-quote .quote-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pull-quote.has-image::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,10,58,.12) 0,rgba(18,10,58,.55) 120px,rgba(18,10,58,.88) 190px,rgba(18,10,58,.94) 100%)}
+.pull-quote .quote-inner{position:relative;z-index:1;padding:190px 36px 32px}
+.pull-quote.has-image blockquote p{color:#fff;font-size:clamp(17px,1.9vw,22px)}
+.pull-quote.has-image figcaption,.pull-quote.has-image figcaption strong{color:#ffffffd9}
+.recommendation + .pull-quote{margin:30px 0}
+.image-band{margin:0;height:300px;overflow:hidden;background:#120a3a}
+.image-band img{width:100%;height:100%;object-fit:cover;display:block}
+.prose > .image-band:first-child{margin:0 0 30px}
+.prose > .image-band:last-child{margin:30px 0 0}
+.signoff{display:flex;gap:20px;align-items:center;margin-top:32px}
+.signoff img{width:120px;height:120px;object-fit:cover;flex:none}
+.signoff p{margin:0!important}
+.r-sub{background:#49953d;color:#fff}
+.r-early{background:#f1b611;color:#2b2100}
+.r-weak{background:#f04145;color:#fff}
+.r-info{background:#bdb5a9;color:#25221d}
+.vc-diagram{position:relative;width:min(100%,520px);aspect-ratio:1;margin:28px auto 34px}
+.vc-ring-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.vc-core{position:absolute;inset:41%;border-radius:50%;background:linear-gradient(135deg,#6a2d90,#1a4495)}
+.vc-node{position:absolute;width:34%;background:#0b0b0b;color:#fff;padding:12px 12px 13px;text-align:center;line-height:1.35}
+.vc-node strong{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px}
+.vc-node span{display:block;font-size:12px;color:#ffffffd9}
+.vc-node.n-top{top:0;left:50%;transform:translateX(-50%)}
+.vc-node.n-bottom{bottom:0;left:50%;transform:translateX(-50%)}
+.vc-node.n-left{left:0;top:50%;transform:translateY(-50%)}
+.vc-node.n-right{right:0;top:50%;transform:translateY(-50%)}
+.sandpit-list{columns:2;column-gap:32px}
+.sandpit-list li{break-inside:avoid}
+.prose p.note{font-size:13px;color:var(--muted)}
+.footer-logos{display:flex;gap:28px;align-items:center;margin-bottom:20px}
+.footer-logos img{height:42px;width:auto}
+.footer-meta{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.report-download p{margin:6px 0 0;color:#ffffffb3;font-size:14px}
+@media(max-width:720px){
+  .pull-quote.has-image{min-height:0}
+  .pull-quote .quote-inner{padding:120px 20px 24px}
+  .image-band{height:200px}
+  .sandpit-list{columns:1}
+  .vc-node{width:40%;padding:8px}
+  .vc-node strong,.vc-node span{font-size:10px}
+}
+@media(max-width:480px){.vc-diagram{display:none}}

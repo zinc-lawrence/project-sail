@@ -1,0 +1,41 @@
+/* Report branding (October 2026 PDF): Poppins, purple #6a2d90 to blue #1a4495, night #200360, cream #f1f1e6, black */
+:root{--ink:#14111a;--muted:#5d5866;--purple:#6a2d90;--deep:#200360;--blue:#1a4495;--wash:#f1f1e6;--line:#e2dfd3;font-family:'Poppins',system-ui,sans-serif}
+body{font-family:'Poppins',system-ui,sans-serif;font-weight:300;color:var(--ink)}
+strong,b,th{font-weight:600}
+h1,h2,h3,h4,summary{font-family:'Poppins',system-ui,sans-serif}
+.masthead{background:#fff;border-bottom:1px solid var(--line)}
+.brand,.brand strong{font-weight:800;letter-spacing:0}
+.download{border-bottom-color:var(--purple)}
+/* Hero: mirrors the v12 cover (night navy, UK dot map, violet SAIL, Rigby/SCC lockup) */
+.hero{background:linear-gradient(90deg,#0d0838 0%,rgba(13,8,56,.94) 34%,rgba(13,8,56,.35) 66%,rgba(13,8,56,0) 100%),url(assets/img/hero-map.jpg) right -2% center/auto 118% no-repeat,#0d0838;color:#fff;max-width:none;margin:0;padding:72px 6% 56px;border-bottom:0}
+.hero .hero-copy{max-width:1240px;margin:0 auto;display:block}
+.hero .hero-intro{max-width:520px;padding-top:12px}
+.hero .eyebrow{color:#fff;opacity:.85;letter-spacing:.18em;font-weight:500}
+.hero .wordmark{font-weight:800;text-transform:uppercase;font-size:clamp(48px,7.4vw,104px);line-height:.88;letter-spacing:-.01em;margin:22px 0 0}
+.hero .wordmark span{display:block}
+.hero .wordmark span:last-child{color:#945ce4}
+.hero h1,.hero h1#title{font-weight:300;letter-spacing:-.5px;font-size:clamp(32px,4.2vw,54px);line-height:1.1;margin:20px 0 22px;color:#fff}
+.hero .hero-subtitle{color:#fff;font-weight:300;letter-spacing:0}
+.hero .hero-subtitle strong{color:#fff;font-weight:600}
+.hero .position{color:#ffffffeb;font-weight:300}
+.hero .primary-link{background:#fff;color:var(--deep);font-weight:600}
+.hero-lockup{max-width:1240px;margin:44px auto 0;width:100%}
+.hero-lockup img{height:46px;width:auto;display:block}
+@media(max-width:720px){.hero{background:linear-gradient(180deg,rgba(13,8,56,.6) 0%,rgba(13,8,56,.92) 55%,#0d0838 100%),url(assets/img/hero-map.jpg) center top/cover no-repeat,#0d0838;padding:44px 6% 40px}.hero-lockup img{height:38px}}
+.partner-caption{color:var(--muted);font-weight:500}
+/* Report body */
+.eyebrow,.section-number,.chapter-toggle,.toggle{color:var(--purple)}
+.chapter h2,details.chapter>.chapter-heading h2,section.partners h2{color:var(--purple);font-weight:600;letter-spacing:-.4px}
+.prose h3,.rec-copy h3{font-weight:600;color:var(--ink)}
+.recommendation summary{font-weight:500}
+.evidence>summary{background:var(--wash);font-weight:600}
+.report-toolbar{background:#fff}
+#section-jump{font-family:'Poppins',system-ui,sans-serif}
+.chapter-controls button{font-family:'Poppins',system-ui,sans-serif;color:var(--purple)}
+a{text-decoration-color:var(--purple)}
+/* Download band and footer: the report's night and black pages */
+.report-download{background:var(--deep);color:#fff}
+.report-download h2{color:#fff;font-weight:600}
+.report-download .primary-link{background:#fff;color:var(--deep)}
+footer{background:#000;color:#ffffffb3;border-top:0;display:block;padding:36px 6% 30px;font-size:12px}
+footer a{color:#fff}
